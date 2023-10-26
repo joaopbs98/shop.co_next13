@@ -6,7 +6,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <main className="background-light850_dark100 mx-auto max-w-screen-2xl">
       <Navbar />
       <div className="flex">
-        <div className=" mx-auto max-w-screen-xl">{children}</div>
+        <div className=" mx-auto w-full max-w-5x1">{children}</div>
       </div>
     </main>
   );

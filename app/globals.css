@@ -9,6 +9,46 @@ body {
 }
 
 @layer utilities {
+  .hero {
+    @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+  }
+
+  .hero__title {
+    @apply 2xl:text-[63px] md:text-[58px] text-[36px] font-extrabold leading-snug sm:text-[38px];
+  }
+
+  .defaults {
+    @apply m-0 p-0 box-border;
+  }
+
+  .marquee {
+    @apply absolute left-0 bg-[#0f0f0f] text-[#eee] py-[30px] font-[600] text-[40px] uppercase overflow-hidden w-screen;
+  }
+
+  .marquee__inner {
+    @apply flex inset-x-0 inset-y-0 flex-auto flex-row gap-40;
+  }
+
+  .marquee__part {
+    @apply flex items-center shrink-0 px-[4px];
+  }
+
+  .hero__subtitle {
+    @apply text-[16px] text-black text-opacity-60 font-light mt-5;
+  }
+
+  .hero__image-container {
+    @apply xl:flex-[1.2] flex justify-end items-end w-full  xl:h-auto;
+  }
+
+  .hero__image {
+    @apply relative xl:w-full w-[90%] xl:h-full h-[590px]  z-0;
+  }
+
+  .hero__image-overlay {
+    @apply absolute xl:-top-6 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen md:h-[490px]  overflow-hidden;
+  }
+
   .flex-center {
     @apply flex justify-center items-center;
   }
