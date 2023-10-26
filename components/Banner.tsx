@@ -7,7 +7,7 @@ const Banner = () => {
     const duplicateList = () => {
       const ul = document.getElementById("logos");
       if (ul) {
-        const duplicateUl = ul.cloneNode(true) as Element;
+        const duplicateUl = ul.cloneNode(true) as HTMLElement;
         ul.insertAdjacentElement("afterend", duplicateUl);
         duplicateUl.setAttribute("aria-hidden", "true");
       }
