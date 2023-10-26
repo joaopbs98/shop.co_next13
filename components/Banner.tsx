@@ -13,6 +13,8 @@ const Banner = () => {
       }
     };
 
+    // TEST
+
     duplicateList();
   }, []);
 
