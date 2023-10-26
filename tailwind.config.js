@@ -52,6 +52,7 @@ module.exports = {
       backgroundImage: {
         "auth-dark": "url('/assets/images/auth-dark.png')",
         "auth-light": "url('/assets/images/auth-light.png')",
+        hero: "url('/assets/images/HeroBackground.png')",
       },
       screens: {
         xs: "420px",
@@ -61,6 +62,10 @@ module.exports = {
           from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
         },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
@@ -69,6 +74,7 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
       },
     },
   },
