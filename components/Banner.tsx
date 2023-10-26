@@ -7,7 +7,7 @@ const Banner = () => {
     const duplicateList = () => {
       const ul = document.getElementById("logos");
       if (ul) {
-        const duplicateUl = ul.cloneNode(true);
+        const duplicateUl = ul.cloneNode(true) as Element;
         ul.insertAdjacentElement("afterend", duplicateUl);
         duplicateUl.setAttribute("aria-hidden", "true");
       }
@@ -15,6 +15,7 @@ const Banner = () => {
 
     duplicateList();
   }, []);
+
   return (
     <div className="w-full bg-black w-screen absolute py-4 left-0 inline-flex flex-nowrap overflow-hidden mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)">
       <ul
