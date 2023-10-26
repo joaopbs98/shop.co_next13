@@ -15,6 +15,7 @@ const Banner = () => {
 
     duplicateList();
   }, []);
+
   return (
     <div className="w-full bg-black w-screen absolute py-4 left-0 inline-flex flex-nowrap overflow-hidden mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)">
       <ul
@@ -53,7 +54,7 @@ const Banner = () => {
             src="/assets/images/zara.svg"
             width={206}
             height={33}
-            alt="logo"
+            alt "logo"
             className="defaults"
           />
         </li>
