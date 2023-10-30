@@ -7,13 +7,11 @@ const Banner = () => {
     const duplicateList = () => {
       const ul = document.getElementById("logos");
       if (ul) {
-        const duplicateUl = ul.cloneNode(true) as Element;
+        const duplicateUl = ul.cloneNode(true);
         ul.insertAdjacentElement("afterend", duplicateUl);
         duplicateUl.setAttribute("aria-hidden", "true");
       }
     };
-
-    // TEST
 
     duplicateList();
   }, []);
@@ -62,7 +60,7 @@ const Banner = () => {
             src="/assets/images/zara.svg"
             width={206}
             height={33}
-            alt="logo"
+            alt "logo"
             className="defaults"
           />
         </li>
