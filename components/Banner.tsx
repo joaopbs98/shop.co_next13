@@ -17,7 +17,13 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="w-full bg-black w-screen absolute py-4 left-0 inline-flex flex-nowrap overflow-hidden mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)">
+    <div
+      className="w-full bg-black w-screen absolute py-4 left-0 inline-flex flex-nowrap overflow-hidden"
+      style={{
+        maskImage:
+          "linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%)",
+      }}
+    >
       <ul
         id="logos"
         className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
