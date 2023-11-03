@@ -3,16 +3,16 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 
 const Banner = () => {
-  const logosRef = React.useRef<HTMLUListElement>(null);
+  const logosRef = React.useRef<HTMLElement | null>(null); // Specify the type as HTMLElement | null
 
   useEffect(() => {
     const logos = logosRef.current;
     if (logos) {
-      const duplicateLogos = logos.cloneNode(true);
-      logos.insertAdjacentElement("afterend", duplicateLogos);
+      const duplicateLogos = logos.cloneNode(true) as HTMLElement; // Cast duplicateLogos to HTMLElement
+      logos.insertAdjacentHTML("afterend", duplicateLogos.outerHTML); // Use insertAdjacentHTML
       duplicateLogos.setAttribute("aria-hidden", "true");
     }
-  }, [logosRef]);
+  }, []);
 
   return (
     <div className="w-full bg-black w-screen absolute py-4 left-0 inline-flex flex-nowrap overflow-hidden mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)">
