@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 
 const Banner = () => {
-  const logosRef = React.useRef(null);
+  const logosRef = React.useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     const logos = logosRef.current;
