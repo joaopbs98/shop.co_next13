@@ -12,17 +12,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { getProductList } from "@/utils";
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarTrigger,
-} from "@/components/ui/menubar";
-import { ChevronDown } from "lucide-react";
-import mockCategories from "@/utils/mockCategories.json";
+import { Menubar, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
 
 export default async function Navbar() {
   // const clothingList = await getProductList();
